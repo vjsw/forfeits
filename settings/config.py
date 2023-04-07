@@ -6,7 +6,7 @@ from enum import Enum
 from emoji import emojize
 
 # токен выдается при регистрации приложения
-TOKEN = '5936435005:AAH5-nNZnSYOYMf4_4IjtshTSgJQbGTDcWI'
+TOKEN = 
 # название БД
 NAME_DB = 'game.db'
 # версия приложения
