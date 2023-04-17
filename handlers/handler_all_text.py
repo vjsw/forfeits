@@ -174,7 +174,7 @@ class HandlerAllText(Handler):
          Обработка события нажатия на кнопку 'Следующий уровень'.
          """
         config.CURRENT_LIST = None
-        if config.CURRENT_LEVEL_GAME == 3:
+        if config.CURRENT_LEVEL_GAME == 2:
             self.bot.send_message(message.chat.id, MESSAGES['message_final'],
                                   parse_mode="HTML",
                                   reply_markup=self.keybords.game())
@@ -182,8 +182,8 @@ class HandlerAllText(Handler):
             self.bot.send_message(message.chat.id, "В этой игре предусмотрено только три уровня.",
                                   reply_markup=self.keybords.game())
         else:
-            config.CURRENT_LEVEL_GAME = config.CURRENT_LEVEL_GAME + 1
-            self.bot.send_message(message.chat.id, "Вы перешли на " + str(config.CURRENT_LEVEL_GAME) + " уровень",
+            # config.CURRENT_LEVEL_GAME = config.CURRENT_LEVEL_GAME + 1
+            self.bot.send_message(message.chat.id, "Вы перешли на " + str(config.CURRENT_LEVEL_GAME + 1) + " уровень",
                                   reply_markup=self.keybords.game())
 
     def handle(self):
