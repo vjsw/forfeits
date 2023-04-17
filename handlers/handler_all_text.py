@@ -3,7 +3,7 @@ from settings.message import MESSAGES
 from settings import config
 # импортируем класс-родитель
 from handlers.handler import Handler
-from save_db import SaveUserData
+#from save_db import SaveUserData
 from data_base.dbalchemy import DBManager
 from models.users import Users
 from datetime import datetime
@@ -173,6 +173,7 @@ class HandlerAllText(Handler):
         """
          Обработка события нажатия на кнопку 'Следующий уровень'.
          """
+        config.CURRENT_LIST = None
         if config.CURRENT_LEVEL_GAME == 3:
             self.bot.send_message(message.chat.id, MESSAGES['message_final'],
                                   parse_mode="HTML",
